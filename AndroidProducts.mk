@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_jupiter.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_jupiter-userdebug
