@@ -13,7 +13,7 @@
 # limitations under the License.
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/vendor/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_mini_tablet_wifionly.mk)
 
 PRODUCT_NAME := lineage_jupiter
 PRODUCT_DEVICE := jupiter
