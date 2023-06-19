@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mini_x86_64.mk
+    $(LOCAL_DIR)/lineage_jupiter.mk
