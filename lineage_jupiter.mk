@@ -13,13 +13,23 @@
 # limitations under the License.
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/lineage/config/common_mini_tablet_wifionly.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
+# for bootanimation, the deck's screen is rotated by 90deg
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 1280
+
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 PRODUCT_NAME := lineage_jupiter
 PRODUCT_DEVICE := jupiter
 PRODUCT_BRAND := Valve
 PRODUCT_MODEL := Steam Deck
-
+PRODUCT_PLATFORM := aerith
+PRODUCT_COPY_FILES += device/valve/jupiter/fstab.hardware:$(TARGET_COPY_OUT_RAMDISK)/fstab.hardware
+PRODUCT_COPY_FILES += device/valve/jupiter/first_stage.sh:$(TARGET_COPY_OUT_RAMDISK)/first_stage.sh
+PRODUCT_COPY_FILES += device/valve/jupiter/busybox:$(TARGET_COPY_OUT_RAMDISK)/busybox
 # default is nosdcard, S/W button enabled in resource
 DEVICE_PACKAGE_OVERLAYS := device/generic/x86/overlay
 PRODUCT_CHARACTERISTICS := nosdcard
+PRODUCT_PACKAGES += selinux_policy_system

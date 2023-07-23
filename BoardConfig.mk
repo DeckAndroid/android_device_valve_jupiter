@@ -2,7 +2,6 @@
 #
 # Product-specific compile-time definitions.
 #
-
 # CPU0
 TARGET_NO_BOOTLOADER := true
 TARGET_CPU_ABI := x86_64
@@ -29,7 +28,7 @@ BOARD_USE_LEGACY_UI := true
 
 TARGET_KERNEL_SOURCE := kernel/valve/jupiter
 TARGET_KERNEL_CONFIG := lineage_jupiter_defconfig
-# PDK does not use ext4 image, but it is added here to prevent build break.
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 576716800

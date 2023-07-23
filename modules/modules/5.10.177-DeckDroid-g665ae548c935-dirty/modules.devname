@@ -1,0 +1,11 @@
+# Device nodes to trigger on-demand module loading.
+cuse cuse c10:203
+btrfs btrfs-control c10:234
+uinput uinput c10:223
+vfio vfio/vfio c10:196
+userio userio c10:240
+hci_vhci vhci c10:137
+vhost_net vhost-net c10:238
+vhost_vsock vhost-vsock c10:241
+snd_seq snd/seq c116:1
+rfkill rfkill c10:242
