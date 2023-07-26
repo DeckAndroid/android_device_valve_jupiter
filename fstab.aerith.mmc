@@ -1,0 +1,4 @@
+# Android fstab file.
+#<src>                  <mnt_point>         <type>    <mnt_flags and options>                               <fs_mgr_flags>
+
+/dev/block/pci/pci0000:00/0000:00:01.3/mmcblk0p3		/		ext4		ro		wait,first_stage_mount	0

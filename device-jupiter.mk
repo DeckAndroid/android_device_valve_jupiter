@@ -1,0 +1,3 @@
+PRODUCT_HARDWARE := jupiter
+PRODUCT_PLATFORM := aerith
+
